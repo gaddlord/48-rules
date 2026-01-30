@@ -8,7 +8,7 @@
 /* Minimal reset */
 *, *::before, *::after { box-sizing: border-box; }
 html { font-size: 20px; }
-body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height: 1.5; color: #1a1a1a; background: #ffebe8; }
+body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height: 1.5; color: #1a1a1a; background: #ffebe8; user-select: none; }
 
 /* App container */
 .app {
@@ -111,6 +111,8 @@ body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height
   height: 100%;
   object-fit: cover;
   display: block;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .slide-image-container .image-placeholder {
