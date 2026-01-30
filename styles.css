@@ -1,0 +1,161 @@
+/* Minimal reset */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height: 1.5; color: #1a1a1a; background: #f5f5f5; }
+
+/* App container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Slide card */
+.slide {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-header {
+  padding: 1.25rem 1.5rem 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.slide-title {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666;
+}
+
+.slide-short-name {
+  margin: 0.25rem 0 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.slide-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.slide-content {
+  min-width: 0;
+}
+
+.slide-description p,
+.slide-example blockquote {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+.slide-example blockquote {
+  padding-left: 1rem;
+  border-left: 4px solid #ccc;
+  font-style: italic;
+  color: #444;
+}
+
+.slide-example blockquote:last-child {
+  margin-bottom: 0;
+}
+
+/* Image area – fixed aspect ratio */
+.slide-image-wrap {
+  min-width: 0;
+}
+
+.slide-image-container {
+  aspect-ratio: 16 / 10;
+  background: #e8e8e8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slide-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-image-container .image-placeholder {
+  color: #888;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Footer */
+.slide-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem 1.25rem;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  background: #eee;
+  border-color: #999;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.slide-counter {
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Responsive: stack content above image on small screens */
+@media (max-width: 640px) {
+  .slide-body {
+    grid-template-columns: 1fr;
+  }
+
+  .slide-short-name {
+    font-size: 1.25rem;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

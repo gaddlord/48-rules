@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 48 Laws of Power</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <article class="slide" aria-live="polite">
+      <header class="slide-header">
+        <h1 class="slide-title" id="slide-title">Law 1</h1>
+        <p class="slide-short-name" id="slide-short-name"></p>
+      </header>
+      <div class="slide-body">
+        <div class="slide-content">
+          <section class="slide-description">
+            <h2 class="visually-hidden">Description</h2>
+            <p id="slide-description"></p>
+          </section>
+          <section class="slide-example">
+            <h2 class="visually-hidden">Example</h2>
+            <blockquote id="slide-example"></blockquote>
+          </section>
+        </div>
+        <div class="slide-image-wrap">
+          <div id="slide-image-container" class="slide-image-container">
+            <!-- Image or placeholder injected by app.js -->
+          </div>
+        </div>
+      </div>
+      <footer class="slide-footer">
+        <button type="button" id="btn-prev" class="btn btn-prev" aria-label="Previous law">Previous</button>
+        <span class="slide-counter" id="slide-counter" aria-label="Current slide">1 / 48</span>
+        <button type="button" id="btn-next" class="btn btn-next" aria-label="Next law">Next</button>
+      </footer>
+    </article>
+  </main>
+  <script src="rules-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
