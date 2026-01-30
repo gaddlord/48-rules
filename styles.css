@@ -1,4 +1,9 @@
-@import url('https://fonts.cdnfonts.com/css/vampire-wars');
+@font-face {
+  font-family: 'Vampire Wars';
+  src: url('Vampire Wars.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* Minimal reset */
 *, *::before, *::after { box-sizing: border-box; }
