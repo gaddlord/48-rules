@@ -1,4 +1,4 @@
-/** @type {Array<{id: number, shortName: string, description: string, example: string, imageUrl: string}>} */
+/** @type {Array<{id: number, shortName: string, description: string, example: string, imageUrl: string, linkUrl?: string, titleLabel?: string}>} */
 var RULES = [
   { id: 1, shortName: "Never Outshine the Master", description: "Ensure that those above you always feel superior. Make your bosses look better and feel smarter; an insecure boss can retaliate strongly.", example: "Courtiers who made their kings feel eclipsed often lost favor or their positions.", imageUrl: "" },
   { id: 2, shortName: "Never Put Too Much Trust in Friends, Learn How to Use Enemies", description: "Friends can grow envious and undermine you. A co-opted enemy often proves more loyal because they work harder to earn your trust.", example: "Historical rulers who elevated former enemies to key roles often gained devoted allies.", imageUrl: "" },
@@ -47,5 +47,6 @@ var RULES = [
   { id: 45, shortName: "Preach the Need for Change, But Never Reform Too Much at Once", description: "Talk change but move slowly. Cloak changes in familiar rituals; too much change sparks backlash.", example: "Reforms that respected tradition were accepted; sudden overhauls provoked resistance.", imageUrl: "" },
   { id: 46, shortName: "Never Appear Too Perfect", description: "To reduce envy, admit a flaw, emphasize luck, or downplay talent. Unchecked envy leads others to work against you.", example: "Those who showed a small weakness often avoided the worst of others' jealousy.", imageUrl: "" },
   { id: 47, shortName: "Do Not Go Past the Mark You Aimed For – In Victory, Learn When to Stop", description: "When you have won, do not let emotion push you further. Victory is a dangerous moment; pressing your luck can lead to unplanned blunders.", example: "Conquerors who overreached after a win often lost what they had gained.", imageUrl: "" },
-  { id: 48, shortName: "Assume Formlessness", description: "Be flexible, fluid, and unpredictable so opponents cannot get a fix on you or figure out how to respond.", example: "Adaptable strategies that had no fixed shape were hardest for enemies to counter.", imageUrl: "" }
+  { id: 48, shortName: "Assume Formlessness", description: "Be flexible, fluid, and unpredictable so opponents cannot get a fix on you or figure out how to respond.", example: "Adaptable strategies that had no fixed shape were hardest for enemies to counter.", imageUrl: "" },
+  { id: 49, shortName: "The 48 Laws of Power", description: "Watch the video summary on YouTube.", example: "", imageUrl: "book.jpg", linkUrl: "https://www.youtube.com/watch?v=q-ubaA5LGzU", titleLabel: "The Book" }
 ];

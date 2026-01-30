@@ -15,7 +15,7 @@
     var rule = RULES[index];
     if (!rule) return;
 
-    elTitle.textContent = 'Law ' + rule.id;
+    elTitle.textContent = rule.titleLabel || ('Rule ' + rule.id);
     elShortName.textContent = rule.shortName;
     elDescription.textContent = rule.description;
     elExample.textContent = rule.example;
@@ -24,11 +24,26 @@
     elImageContainer.innerHTML = '';
     var img = document.createElement('img');
     img.src = imageSrc;
-    img.alt = 'Illustration for Law ' + rule.id;
-    img.onerror = function () { this.style.display = 'none'; this.parentNode.innerHTML = '<span class="image-placeholder">Image for Law ' + rule.id + '</span>'; };
-    elImageContainer.appendChild(img);
+    img.alt = 'Illustration for Rule ' + rule.id;
+    img.onerror = function () { this.style.display = 'none'; this.parentNode.innerHTML = '<span class="image-placeholder">Image for Rule ' + rule.id + '</span>'; };
+    if (rule.linkUrl) {
+      var a = document.createElement('a');
+      a.href = rule.linkUrl;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.appendChild(img);
+      elImageContainer.appendChild(a);
+    } else {
+      elImageContainer.appendChild(img);
+    }
 
-    elCounter.textContent = (index + 1) + ' / ' + TOTAL;
+    var isLastSlide = index === TOTAL - 1;
+    if (isLastSlide) {
+      elCounter.style.display = 'none';
+    } else {
+      elCounter.style.display = '';
+      elCounter.textContent = (index + 1) + ' / 48';
+    }
 
     btnPrev.disabled = index === 0;
     btnNext.disabled = index === TOTAL - 1;

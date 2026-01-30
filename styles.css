@@ -1,14 +1,30 @@
+@import url('https://fonts.cdnfonts.com/css/vampire-wars');
+
 /* Minimal reset */
 *, *::before, *::after { box-sizing: border-box; }
-body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height: 1.5; color: #1a1a1a; background: #f5f5f5; }
+html { font-size: 20px; }
+body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height: 1.5; color: #1a1a1a; background: #ffebe8; }
 
 /* App container */
 .app {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+}
+
+.page-header {
+  font-family: 'Vampire Wars', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+  user-select: none;
 }
 
 /* Slide card */
@@ -28,7 +44,7 @@ body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height
 
 .slide-title {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -37,7 +53,7 @@ body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height
 
 .slide-short-name {
   margin: 0.25rem 0 0;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #111;
 }
@@ -56,7 +72,7 @@ body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height
 .slide-description p,
 .slide-example blockquote {
   margin: 0 0 1rem;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 }
 
 .slide-example blockquote {
@@ -94,7 +110,7 @@ body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height
 
 .slide-image-container .image-placeholder {
   color: #888;
-  font-size: 0.875rem;
+  font-size: 1rem;
   text-align: center;
   padding: 1rem;
 }
@@ -112,13 +128,14 @@ body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height
 
 .btn {
   padding: 0.5rem 1rem;
-  font-size: 0.9375rem;
+  font-size: 1.1rem;
   font-weight: 600;
   border: 1px solid #ccc;
   border-radius: 6px;
   background: #fff;
   color: #333;
   cursor: pointer;
+  user-select: none;
 }
 
 .btn:hover:not(:disabled) {
@@ -132,9 +149,10 @@ body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height
 }
 
 .slide-counter {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #666;
   font-weight: 500;
+  user-select: none;
 }
 
 /* Responsive: stack content above image on small screens */
@@ -144,7 +162,7 @@ body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height
   }
 
   .slide-short-name {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 
